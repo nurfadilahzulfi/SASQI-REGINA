@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+    <title>Sasqi Regina</title>
+    <style>
+      #typed-text {
+        color: white;
+      }
+      .paragraf {
+        text-align: center;
+        color: white;
+      }
+      .audio {
+        width: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="typed-text" style="text-align: center; margin-top: 250px"></h1>
+      <p class="paragraf mt-3">selamat bertambah usia, makin sabar dan kuat, serta do'a terbaik untukmu... <br />semoga di umur yang sekarang semesta lebih berpihak yaa dan semoga bisa mendapatkan hal yang selama ini kamu perjuangkan!!</p>
+      <p class="paragraf">dannnnn semoga itu selamanya. best whises for special people<3</p>
+    </div>
+    <div class="klik text-center mb-4">
+      <a href="galeri.html" target="_blank"><button type="button" class="btn btn-light">Klik</button></a>
+    </div>
+    <center>
+      <audio class="audio" controls="true" autoplay>
+        <source src="img/SAMPAI JADI DEBU.mp3" type="audio/mpeg" />
+        Browser anda tidak mendukung tag audio
+      </audio>
+    </center>
+    <script>
+      //Text Jalan Awal
+      const typedText = document.getElementById("typed-text");
+      const text = "Selamat Ulang Tahun Sasqi Regina...!!!";
+      let index = 0;
+      let typingInterval;
+
+      function type() {
+        if (index < text.length) {
+          typedText.textContent += text.charAt(index);
+          index++;
+        } else {
+          clearInterval(typingInterval);
+          typedText.innerHTML += '<span class="cursor">|</span>';
+          setTimeout(restartTyping, 5000);
+        }
+      }
+
+      function restartTyping() {
+        typedText.textContent = "";
+        index = 0;
+        typingInterval = setInterval(type, 100);
+      }
+
+      typingInterval = setInterval(type, 100);
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LLWL5N9CSM");
+    </script>
+    <script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju-2.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/green-bintang-jatuh.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  </body>
+</html>
